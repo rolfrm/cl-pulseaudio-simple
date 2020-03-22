@@ -8,13 +8,12 @@
 	   :no-direction :playback :record :upload
 	   :rate :channels
 	   :pulse-channel-map :pulse-buffer-attr
-	   :pa-simple-new :pa-simple-free :pa-simple-write
+	   :pa-simple-new :pa-simple-free :pa-simple-write :pa-simple-read
 	   :get-latency :pa-simple-flush :pa-simple-test)
   )
 
 (defpackage :pulseaudio-simple
   (:use :cl :pulseaudio-simple-internal :sb-alien)
-  (:export :pa-new :pa-free :pa-write :pa-read :playback :u8 :float32le :float32be)
-  (:shadow :playback :record :u8 :float32le :float32be)
+  (:export :pa-new :pa-free :pa-write :pa-read :playback :u8 :float32le :float32be :record :pa-flush-client)
+  (:shadowing-import-from :pulseaudio-simple-internal :playback :record :u8 :float32le :float32be)
   )
-

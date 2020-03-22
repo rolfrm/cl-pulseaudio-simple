@@ -22,3 +22,8 @@
 (defun pa-read(pa buffer)
   (with-alien ((error int))
     (pa-simple-read pa (sb-sys:vector-sap buffer) (* 4 (array-total-size buffer)) (addr error))))
+
+(defun pa-flush-client(pa)
+  (with-alien ((error int))
+    (pa-simple-flush pa (addr error))))
+

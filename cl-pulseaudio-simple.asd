@@ -8,5 +8,5 @@
   :serial t
   :components ((:file "package")
 	       (:file "pa-simple-internal" :depends-on ("package"))
-              ; (:file "cl-pulseaudio-simple" :depends-on ("pa-simple-internal"))
+	       (:file "cl-pulseaudio-simple" :depends-on ("pa-simple-internal"))
 	       ))

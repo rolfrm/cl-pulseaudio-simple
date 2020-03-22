@@ -33,8 +33,8 @@
 
 (define-alien-routine "pa_simple_get_latency" long-long (pa (* pulse-simple)) (error (* int)))
 
-(define-alien-routine "pa_flush" int (pa (* pulse-simple)) (error (* int)))
-#|
+(define-alien-routine "pa_simple_flush" int (pa (* pulse-simple)) (error (* int)))
+
 (defun pa-simple-test()
 
   (with-alien ((spec sample-spec)
@@ -56,4 +56,4 @@
       )
     ))
 
-|#
+
