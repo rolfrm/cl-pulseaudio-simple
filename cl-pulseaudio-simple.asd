@@ -1,6 +1,6 @@
 ;;;; cl-pulseaudio-simple.asd
 
-(asdf:defsystem #:cl-pulseaudio-simple
+(asdf:defsystem :cl-pulseaudio-simple
   :description "Library for using the simple pulseaudio API."
   :author "Rolf Madsen <rolfrm@gmail.com>"
   :license  "MIT"

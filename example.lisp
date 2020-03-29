@@ -1,4 +1,4 @@
-(asdf:load-system "cl-pulseaudio-simple")
+
 (defpackage :pulseaudio-simple-example
   (:use :cl :pulseaudio-simple)
   )
